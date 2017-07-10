@@ -24,12 +24,12 @@ Pod::Spec.new do |s|
   s.public_header_files  = '*.h'
 
   s.subspec 'encode' do |e|
-    e.public_header_files = ['pb.h', 'pb_encode.h']
+    e.public_header_files = ['pb.h', 'pb_encode.h', 'pb_common.h']
     e.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_encode.h', 'pb_encode.c']
   end
 
   s.subspec 'decode' do |d|
-    d.public_header_files = ['pb.h', 'pb_decode.h']
+    d.public_header_files = ['pb.h', 'pb_decode.h', 'pb_common.h']
     d.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_decode.h', 'pb_decode.c']
   end
 end

@@ -13,10 +13,10 @@ Pod::Spec.new do |s|
                      [pb]: https://developers.google.com/protocol-buffers/
                    DESC
 
-  s.homepage     = "http://koti.kapsi.fi/jpa/nanopb/"
+  s.homepage     = "https://github.com/nanopb/nanopb"
   s.license      = { :type => 'zlib', :file => 'LICENSE.txt' }
   s.author       = { "Petteri Aimonen" => "jpa@nanopb.mail.kapsi.fi" }
-  s.source       = { :http => "http://koti.kapsi.fi/~jpa/nanopb/download/nanopb-#{s.version}.tar.gz" }
+  s.source       = { :http => "https://github.com/nanopb/nanopb/archive/#{s.version}.tar.gz" }
   s.requires_arc = false
 	s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1' }
 

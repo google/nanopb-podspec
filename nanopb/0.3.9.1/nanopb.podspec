@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "nanopb"
-  s.version      = "0.3.901"
+  s.version      = "0.3.90101"
   s.summary      = "Protocol buffers with small code size."
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/nanopb/nanopb.git", :tag => "0.3.9.1" }
 
   s.requires_arc = false
-  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1 PB_ENABLE_MALLOC=1' }
+  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1' }
 
   s.source_files  = '*.{h,c}'
   s.public_header_files  = '*.h'

@@ -1,24 +1,21 @@
 Pod::Spec.new do |s|
   s.name         = "nanopb"
-  s.version      = "0.3.8"
+  s.version      = "0.3.904"
   s.summary      = "Protocol buffers with small code size."
 
   s.description  = <<-DESC
-                    Nanopb is a plain-C implementation of Google's
-                    [Protocol Buffers][pb] data format. It is targeted at
-                    32 bit microcontrollers, but is also fit for
-                    other embedded systems with tight (2-10 kB ROM,
-                    <1 kB RAM) memory constraints.
-
-                     [pb]: https://developers.google.com/protocol-buffers/
+                    Nanopb is a small code-size Protocol Buffers implementation
+                    in ansi C. It is especially suitable for use in
+                    microcontrollers, but fits any memory restricted system.
                    DESC
 
   s.homepage     = "https://github.com/nanopb/nanopb"
   s.license      = { :type => 'zlib', :file => 'LICENSE.txt' }
   s.author       = { "Petteri Aimonen" => "jpa@nanopb.mail.kapsi.fi" }
-  s.source       = { :http => "https://github.com/nanopb/nanopb/archive/#{s.version}.tar.gz" }
+  s.source       = { :git => "https://github.com/nanopb/nanopb.git", :tag => "0.3.9.4" }
+
   s.requires_arc = false
-	s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1' }
+  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1 PB_ENABLE_MALLOC=1' }
 
   s.source_files  = '*.{h,c}'
   s.public_header_files  = '*.h'

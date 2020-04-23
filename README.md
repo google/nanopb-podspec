@@ -1,11 +1,11 @@
 ### Version numbers
 
-Starting with nanopb 0.3.9.4, the CocoaPods version is disconnected from the
+Starting with nanopb 0.3.9.5, the CocoaPods version is disconnected from the
 nanopb version and is described by the following table:
 
 | CocoaPods Version | nanopb version |
 | ----------------- | -------------- |
-| 1.0.0             | 0.3.9.4        |
+| 1.0.0             | 0.3.9.5        |
 
 
 #### Version rationale and background

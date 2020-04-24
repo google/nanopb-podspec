@@ -1,24 +1,23 @@
 ### Version numbers
 
-Starting with nanopb 0.3.9.5, the CocoaPods version is disconnected from the
-nanopb version and is described by the following table:
-
-| CocoaPods Version | nanopb version |
-| ----------------- | -------------- |
-| 1.0.0             | 0.3.9.5        |
-
-
-#### Version rationale and background
-
-nanopb doesn't follow https://semver.org/. It uses four digit versions and is
-still setting the major version to 0 which in semver implies any update can be
+nanopb doesn't follow https://semver.org/. It uses four digit versions and has
+only used major version 0 which in semver implies any update can be
 breaking.
+
+The CocoaPods minor version is calculated from the nanopb version with the
+formula:
+`minor * 100,000 + patch * 100 + fourth`
+
+The CocoaPod major version will be 1 for the forseeable future. It is not
+0 because some CocoaPods incorrectly published with floating dependencies
+allowing updates to any 0 major version.
+
+The CocoaPods patch version should be used for any podspec or other packaging
+updates.
+
+#### Additional versioning background
 
 While nanopb tries to follow a variation of semver and updates the fourth digit
 for non-breaking patch updates, the policy is not enforced for binary
 dependencies which can break when source dependencies don't, like the `#define`
 changes in 0.3.9.4.
-
-The versioning scheme is exacerbated by early Firebase releases specifying
-CocoaPods dependencies with `"nanopb": "~> 0.3"` which allows an update to any
-subsequent 0.* release.

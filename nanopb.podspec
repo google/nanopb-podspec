@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "nanopb"
-  s.version      = "1.0.0"
+  # CocoaPods minor version is minor * 100,000 + patch * 100 + fourth
+  s.version      = "1.300905.0"
   s.summary      = "Protocol buffers with small code size."
 
   s.description  = <<-DESC

@@ -6,7 +6,7 @@ breaking.
 
 The CocoaPods minor version is calculated from the nanopb version with the
 formula:
-`minor * 100,000 + patch * 100 + fourth`
+`minor * 10,000 + patch * 100 + fourth`
 
 The CocoaPod major version will be 1 for the forseeable future. It is not
 0 because some CocoaPods incorrectly published with floating dependencies

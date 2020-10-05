@@ -8,9 +8,13 @@ The CocoaPods minor version is calculated from the nanopb version with the
 formula:
 `minor * 10,000 + patch * 100 + fourth`
 
-The CocoaPod major version will be 1 for the forseeable future. It is not
-0 because some CocoaPods incorrectly published with floating dependencies
-allowing updates to any 0 major version.
+The CocoaPod major version is not 0 because some CocoaPods incorrectly published
+with floating dependencies allowing updates to any 0 major version. Other major
+version updates may be done because of iOS support versioning changes even
+if the underlying nanopb library is unimpacted. For example, the major update
+from 1 to 2 is done to bump the minimum supported iOS version to 9 because
+Xcode 12 no longer supports iOS 8 and generates build warnings for nanopb
+client apps.
 
 The CocoaPods patch version should be used for any podspec or other packaging
 updates.

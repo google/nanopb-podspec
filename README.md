@@ -25,3 +25,10 @@ While nanopb tries to follow a variation of semver and updates the fourth digit
 for non-breaking patch updates, the policy is not enforced for binary
 dependencies which can break when source dependencies don't, like the `#define`
 changes in 0.3.9.4.
+
+The pod instead looks for sources from the podspec's `source` attribute.
+
+### Publishing
+
+Publish this pod with `--allow-warnings` to address a warning caused by
+the podspec's `version` attribute not matching a tag in the source-of-truth repo.

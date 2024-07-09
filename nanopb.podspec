@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "nanopb"
   # CocoaPods minor version is minor * 10,000 + patch * 100 + fourth
-  s.version      = "2.30910.0"
+  s.version      = "3.30910.0"
   s.summary      = "Protocol buffers with small code size."
 
   s.description  = <<-DESC
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.author       = { "Petteri Aimonen" => "jpa@nanopb.mail.kapsi.fi" }
   s.source       = { :git => "https://github.com/nanopb/nanopb.git", :tag => "0.3.9.10" }
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.11'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
+  s.ios.deployment_target = '12.0'
+  s.osx.deployment_target = '10.15'
+  s.tvos.deployment_target = '13.0'
+  s.watchos.deployment_target = '7.0'
 
   s.requires_arc = false
   s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1 PB_ENABLE_MALLOC=1' }

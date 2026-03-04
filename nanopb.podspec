@@ -23,18 +23,22 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) PB_FIELD_32BIT=1 PB_NO_PACKED_STRUCTS=1 PB_ENABLE_MALLOC=1' }
 
-  s.source_files  = '*.{h,c}'
-  s.public_header_files  = '*.h'
+  s.source_files  = 'src/**', 'include/nanopb/*.h'
+  s.public_header_files  = 'include/nanopb/*.h'
+  
+  s.pod_target_xcconfig = {
+    'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}" "${PODS_TARGET_SRCROOT}/include/nanopb"'
+  }
 
-  s.subspec 'encode' do |e|
-    e.public_header_files = ['pb.h', 'pb_encode.h', 'pb_common.h']
-    e.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_encode.h', 'pb_encode.c']
-  end
-
-  s.subspec 'decode' do |d|
-    d.public_header_files = ['pb.h', 'pb_decode.h', 'pb_common.h']
-    d.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_decode.h', 'pb_decode.c']
-  end
+#  s.subspec 'encode' do |e|
+#    e.public_header_files = ['pb.h', 'pb_encode.h', 'pb_common.h']
+#    e.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_encode.h', 'pb_encode.c']
+#  end
+#
+#  s.subspec 'decode' do |d|
+#    d.public_header_files = ['pb.h', 'pb_decode.h', 'pb_common.h']
+#    d.source_files = ['pb.h', 'pb_common.h', 'pb_common.c', 'pb_decode.h', 'pb_decode.c']
+#  end
 
   s.resource_bundles = {
     "#{s.module_name}_Privacy" => 'spm_resources/PrivacyInfo.xcprivacy'
